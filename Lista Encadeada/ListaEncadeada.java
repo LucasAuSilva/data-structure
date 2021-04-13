@@ -54,7 +54,6 @@ public class ListaEncadeada {
         else {
             if (elemento >= ultimo.info) { // elemento maior ou igual ao ultimo
                 InsereUltimo(elemento);
-                this.tamanho++;
             } else { // elemento intermediario
                 No p = primeiro;
                 No q = null;
