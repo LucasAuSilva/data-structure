@@ -27,7 +27,7 @@ public class ListaEncadeada {
         if (vazio()) {
             this.primeiro = p;
             this.ultimo = p;
-            this.tamanho += 2
+            this.tamanho += 1
         } else
             this.primeiro = p;
             this.tamanho++;
@@ -38,7 +38,7 @@ public class ListaEncadeada {
         if (vazio()) {
             this.primeiro = p;
             this.ultimo = p;
-            this.tamanho += 2;
+            this.tamanho += 1;
         } else {
             this.ultimo.proximo = p;
             this.ultimo = p;
@@ -54,6 +54,7 @@ public class ListaEncadeada {
         else {
             if (elemento >= ultimo.info) { // elemento maior ou igual ao ultimo
                 InsereUltimo(elemento);
+                this.tamanho++;
             } else { // elemento intermediario
                 No p = primeiro;
                 No q = null;
@@ -73,7 +74,7 @@ public class ListaEncadeada {
         if(vazio()) {
             this.primeiro = novo;
             this.ultimo = novo;
-            this.tamanho += 2;
+            this.tamanho += 1;
         } else {
             novo.proximo = no.proximo;
             no.proximo = novo;
