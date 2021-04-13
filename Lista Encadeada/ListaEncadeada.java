@@ -27,8 +27,10 @@ public class ListaEncadeada {
         if (vazio()) {
             this.primeiro = p;
             this.ultimo = p;
+            this.tamanho += 2
         } else
             this.primeiro = p;
+            this.tamanho++;
     }
 
     public void InsereUltimo(int elemento) {
@@ -36,9 +38,11 @@ public class ListaEncadeada {
         if (vazio()) {
             this.primeiro = p;
             this.ultimo = p;
+            this.tamanho += 2;
         } else {
             this.ultimo.proximo = p;
             this.ultimo = p;
+            this.tamanho++;
         }
     }
 
@@ -46,9 +50,11 @@ public class ListaEncadeada {
         No novo = new No(elemento);
         if(vazio() || elemento < primeiro.info) 
             inserePrimeiro(elemento); // lista vazia ou elemento menor que o primeiro
+            this.tamanho++;
         else {
             if (elemento >= ultimo.info) { // elemento maior ou igual ao ultimo
                 InsereUltimo(elemento);
+                this.tamanho++;
             } else { // elemento intermediario
                 No p = primeiro;
                 No q = null;
@@ -58,6 +64,7 @@ public class ListaEncadeada {
                 }
                 q.proximo = novo;
                 novo.proximo = ultimo;
+                this.tamanho++;
             }
         }
     }
@@ -67,9 +74,11 @@ public class ListaEncadeada {
         if(vazio()) {
             this.primeiro = novo;
             this.ultimo = novo;
+            this.tamanho += 2;
         } else {
             novo.proximo = no.proximo;
             no.proximo = novo;
+            this.tamanho++;
         }
     }
 
@@ -80,6 +89,7 @@ public class ListaEncadeada {
         } else {
             No p = primeiro.proximo;
             primeiro = p;
+            this.tamanho--;
             return primeiroElemento;
         }
     }
@@ -96,6 +106,7 @@ public class ListaEncadeada {
                 p = p.proximo;
             }
             ultimo = q;
+            this.tamanho--;
             return ultimoElemento;
         }
     }
@@ -106,6 +117,7 @@ public class ListaEncadeada {
             return 0;
         } else {
             no.proximo = posterior.proximo;
+            this.tamanho--;
             return posterior.info;
         }
     }
@@ -114,6 +126,7 @@ public class ListaEncadeada {
         if(vazio()) {
             return 0;
         } else {
+            this.tamanho--;
             return ultimo.info;
         }
     }  
