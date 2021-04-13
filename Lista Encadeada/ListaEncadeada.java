@@ -9,12 +9,13 @@ public class ListaEncadeada {
         this.tamanho = 0;
     }
 
-    public void mostra_lista() {
+    public void mostraLista() {
         No p = this.primeiro;
         while (p != null) {
-            System.out.println(p.info);
+            System.out.print(p.info + " ");
             p = p.proximo;
         }
+        System.out.println("\n");
     }
 
     public boolean vazio() {
@@ -27,7 +28,7 @@ public class ListaEncadeada {
         if (vazio()) {
             this.primeiro = p;
             this.ultimo = p;
-            this.tamanho += 1
+            this.tamanho += 1;
         } else
             this.primeiro = p;
             this.tamanho++;
@@ -48,10 +49,10 @@ public class ListaEncadeada {
 
     public void insererOrdenado(int elemento) {
         No novo = new No(elemento);
-        if(vazio() || elemento < primeiro.info) 
+        if(vazio() || elemento < primeiro.info) {
             inserePrimeiro(elemento); // lista vazia ou elemento menor que o primeiro
             this.tamanho++;
-        else {
+        } else {
             if (elemento >= ultimo.info) { // elemento maior ou igual ao ultimo
                 InsereUltimo(elemento);
                 this.tamanho++;
