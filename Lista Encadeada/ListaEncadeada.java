@@ -89,7 +89,7 @@ public class ListaEncadeada {
             return 0;
         } else {
             No p = primeiro.proximo;
-            primeiro = p;
+            this.primeiro = p;
             this.tamanho--;
             return primeiroElemento;
         }
@@ -106,7 +106,7 @@ public class ListaEncadeada {
                 q = p;
                 p = p.proximo;
             }
-            ultimo = q;
+            this.ultimo = q;
             this.tamanho--;
             return ultimoElemento;
         }
