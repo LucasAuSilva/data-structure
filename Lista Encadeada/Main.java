@@ -14,16 +14,16 @@ public class Main {
         x.insererOrdenado(20);
         x.insererOrdenado(40);
 
-        y.inserePrimeiro(13);
-        y.insererOrdenado(21);
-        y.insererOrdenado(41);
+        y.inserePrimeiro(12);
+        y.insererOrdenado(20);
+        y.insererOrdenado(40);
 
         x.mostraLista();
         y.mostraLista();
         result = c.calculo(x.primeiro, y.primeiro);
         System.out.println(result + "\n");
 
-        c.thirdList(x, y, z);
+        c.thirdList(x.primeiro, y.primeiro, z);
 
         z.mostraLista();
     }

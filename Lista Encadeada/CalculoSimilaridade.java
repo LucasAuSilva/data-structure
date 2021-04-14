@@ -30,19 +30,12 @@ public class CalculoSimilaridade {
         return result;
     }
 
-    public void thirdList(ListaEncadeada x, ListaEncadeada y, ListaEncadeada z) {
-        while(!x.vazio() || !y.vazio()) {
-            if (!x.vazio() && !y.vazio()) {
-                if (x.primeiro.info > y.primeiro.info)
-                    z.insererOrdenado(y.retiraPrimeiro());
-                else 
-                    z.insererOrdenado(x.retiraPrimeiro());
-            } else {
-                if (x.vazio())
-                    z.insererOrdenado(y.retiraPrimeiro());
-                else
-                    z.insererOrdenado(x.retiraPrimeiro());
-            }
+    public void thirdList(No x, No y, ListaEncadeada z) {
+        while (x != null && y != null) {
+            if (x.info == y.info)
+                z.insererOrdenado(x.info);
+            x = x.proximo;
+            y = y.proximo;
         }
     }
 }
