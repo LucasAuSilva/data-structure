@@ -11,7 +11,7 @@ public class Main {
         ListaEncadeada z = new ListaEncadeada();
 
         x.inserePrimeiro(12);
-        x.insererOrdenado(20);
+        x.insererOrdenado(10);
         x.insererOrdenado(40);
 
         y.inserePrimeiro(12);
@@ -23,7 +23,7 @@ public class Main {
         result = c.calculo(x.primeiro, y.primeiro);
         System.out.println(result + "\n");
 
-        c.thirdList(x.primeiro, y.primeiro, z);
+        c.thirdList(x, y, z);
 
         z.mostraLista();
     }
