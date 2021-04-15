@@ -1,5 +1,4 @@
 
-
 public class CalculoSimilaridade {
 
     public double calculo(No x, No y) {
@@ -22,8 +21,6 @@ public class CalculoSimilaridade {
 
             if (x == null) 
                 denom = Math.sqrt(denomSumX * denomSumY);
-            result = (nume/denom);
-
         }
         result = (nume/denom);
 
